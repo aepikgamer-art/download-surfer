@@ -4,6 +4,10 @@ A Firefox extension that opens an **original Subway-Surfers-style endless runner
 
 > 100% original game code and art. Not affiliated with, and contains no assets from, SYBO's Subway Surfers.
 
+## Made with AI
+
+This project was made **100% with AI** - the entire extension (game code, background script, popup, docs, and this repository itself) was built and published entirely by an AI agent using [Composio](https://composio.dev), with no human-written code.
+
 ## Features
 
 - Detects active downloads via the WebExtension `downloads` API
