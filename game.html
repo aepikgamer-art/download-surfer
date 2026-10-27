@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Download Surfer</title>
+  <style>
+    body { margin: 0; background: #101024; color: #fff; font-family: system-ui, sans-serif; user-select: none; }
+    #hud {
+      padding: 6px 10px; font-size: 12px; background: #1b1b3a;
+      border-bottom: 1px solid #33336b; display: flex; gap: 10px; align-items: center;
+    }
+    #hud b { color: #7cf5ff; }
+    #progressWrap { flex: 1; height: 8px; background: #2a2a55; border-radius: 4px; overflow: hidden; }
+    #progressBar { height: 100%; width: 0%; background: linear-gradient(90deg, #7cf5ff, #b6ff7c); transition: width .3s; }
+    canvas { display: block; width: 480px; height: 640px; }
+    #overlay {
+      position: absolute; inset: 0; top: 30px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; background: rgba(10,10,30,.75);
+      font-size: 20px; text-align: center; gap: 8px;
+    }
+    #overlay.hidden { display: none; }
+    .hint { font-size: 13px; opacity: .8; }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <span>Downloads: <b id="dlCount">0</b></span>
+    <div id="progressWrap"><div id="progressBar"></div></div>
+    <span id="dlPct">idle</span>
+  </div>
+  <canvas id="game" width="480" height="640"></canvas>
+  <div id="overlay">
+    <div style="font-size:28px;font-weight:700">DOWNLOAD SURFER</div>
+    <div class="hint">arrows / WASD / swipe &mdash; swap lanes, jump, duck. Grab coins, dont crash.</div>
+    <div class="hint">Your run starts as soon as a download starts</div>
+    <div id="best" class="hint"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

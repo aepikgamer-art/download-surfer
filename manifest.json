@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Download Surfer",
+  "version": "1.0.0",
+  "description": "Plays a Subway-Surfers-style endless runner while your downloads are in progress. Original game, no copyrighted assets.",
+  "permissions": ["downloads", "storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "Download Surfer",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png",
+    "96": "icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "download-surfer@aepikgamer-art",
+      "strict_min_version": "109.0"
+    }
+  }
+}
